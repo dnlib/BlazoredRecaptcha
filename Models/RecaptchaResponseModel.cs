@@ -1,4 +1,5 @@
-﻿
+﻿using System.Text.Json.Serialization;
+
 namespace BlazoredRecaptcha.Models
 {
     public struct RecaptchaResponse
@@ -6,10 +7,12 @@ namespace BlazoredRecaptcha.Models
         /// <summary>
         /// True if the token is valid, false if it is invalid
         /// </summary>
+        [JsonPropertyName("success")]
         public bool IsSuccess { get; set; }
         /// <summary>
         /// The bot likelihood score
         /// </summary>
+        [JsonPropertyName("score")]
         public float Score { get; set; }
     }
 }
