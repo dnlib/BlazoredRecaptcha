@@ -1,5 +1,5 @@
 ﻿function loadRecaptcha(key) {
-    var script = document.createElement('script');
+    let script = document.createElement('script');
     script.src = 'https://www.google.com/recaptcha/api.js?render=' + key;
     script.type = 'text/javascript';
     script.async = true;
