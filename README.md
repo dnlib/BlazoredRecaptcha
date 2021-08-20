@@ -32,7 +32,7 @@ services.AddRecaptcha(options =>
 
 (you can also combine this with Microsoft's standard appsettings system, I would recommend using appsettings instead of hard-coding the keys into your application)
 
-This will inject the RecaptchaService into your ServiceCollection. You can now access it from any Razor page like this:
+This will inject the RecaptchaService into your ServiceCollection. You can now access it from any Blazor page like this:
 
 ```C#
 @inject RecaptchaService RecaptchaService
