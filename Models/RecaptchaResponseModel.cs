@@ -2,7 +2,7 @@
 
 namespace BlazoredRecaptcha.Models
 {
-    public struct RecaptchaResponse
+    public class RecaptchaResponse
     {
         /// <summary>
         /// True if the token is valid, false if it is invalid
