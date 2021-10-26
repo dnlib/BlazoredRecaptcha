@@ -1,4 +1,4 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace BlazoredRecaptcha.Models
 {
@@ -7,12 +7,12 @@ namespace BlazoredRecaptcha.Models
         /// <summary>
         /// True if the token is valid, false if it is invalid
         /// </summary>
-        [JsonPropertyName("success")]
+        [JsonProperty("success")]
         public bool IsSuccess { get; set; }
         /// <summary>
         /// The bot likelihood score
         /// </summary>
-        [JsonPropertyName("score")]
+        [JsonProperty("score")]
         public float Score { get; set; }
     }
 }
