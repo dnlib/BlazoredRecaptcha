@@ -1,4 +1,5 @@
-﻿function loadRecaptcha(key) {
+﻿function loadRecaptcha(key) 
+{
     let script = document.createElement('script');
     script.src = 'https://www.google.com/recaptcha/api.js?render=' + key;
     script.type = 'text/javascript';
@@ -9,18 +10,22 @@
     document.getElementsByTagName('head')[0].appendChild(script);
 }
 
-function isRecaptchaLoaded(key) {
-    try {
+function isRecaptchaLoaded(key) 
+{
+    try 
+    {
         grecaptcha.execute(key, { action: 'homepage' }).then(function () {
             return true;
         });
     }
-    catch {
-        return false;
+    catch(err)
+    {
     }
+    
     return false;
 }
 
-function generateCaptchaToken(key, action) {
+function generateCaptchaToken(key, action) 
+{
     return grecaptcha.execute(key, { action: action });
 }

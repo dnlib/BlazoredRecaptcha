@@ -3,7 +3,7 @@
 namespace BlazoredRecaptcha.Exceptions
 {
     /// <summary>
-    /// Thrown when Google responds with a non-OK HTTP status code
+    ///     Thrown when Google responds with a non-OK HTTP status code
     /// </summary>
     public class InvalidGoogleResponse : Exception
     {
