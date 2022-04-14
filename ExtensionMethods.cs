@@ -1,4 +1,5 @@
 ﻿using System;
+using BlazoredRecaptcha.Interfaces;
 using BlazoredRecaptcha.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.JSInterop;
@@ -21,6 +22,6 @@ public static class ExtensionMethods
         var config = new RecaptchaConfiguration();
         configuration(config);
 
-        return services.AddScoped(x => new RecaptchaService(config, x.GetRequiredService<IJSRuntime>()));
+        return services.AddScoped<IRecaptchaService>(x => new RecaptchaService(config, x.GetRequiredService<IJSRuntime>()));
     }
 }
