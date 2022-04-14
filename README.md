@@ -19,6 +19,15 @@ git clone https://github.com/HarryTq/BlazoredRecaptcha.git
 
 Then open the .sln file with Visual Studio 2019 and just rebuild. It should fetch the NuGet packages for you.
 
+### Installation
+You can install it via our new NuGet package!
+
+```
+PM> Install-Package Recaptcha.Blazored
+```
+
+Or search for `Recaptcha.Blazored` and install via the NuGet UI on Visual Studio or any other IDE (Rider, etc.)
+
 ## Usage / documentation
 Let's get started. To begin using the library, simply add it to your ServiceCollection:
 
