@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Net;
 using System.Net.Http;
+using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using BlazoredRecaptcha.Exceptions;
 using BlazoredRecaptcha.Interfaces;
 using BlazoredRecaptcha.Models;
 using Microsoft.JSInterop;
-using Newtonsoft.Json;
 
 namespace BlazoredRecaptcha
 {
@@ -47,15 +47,15 @@ namespace BlazoredRecaptcha
         public async Task<string> GenerateCaptchaTokenAsync(string action,
             CancellationToken cancellationToken = default)
         {
+            // Do not use the cancellation token as it may cause massive recursion
             _ = action ?? throw new ArgumentNullException(nameof(action));
 
             if (await _js.InvokeAsync<bool>("isRecaptchaLoaded", _config.SiteKey))
-                return await _js.InvokeAsync<string>("generateCaptchaToken",
-                    _config.SiteKey, action);
+                return await _js.InvokeAsync<string>("generateCaptchaToken",_config.SiteKey, action);
 
             await LoadRecaptchaAsync(cancellationToken);
             await Task.Delay(1000, cancellationToken);
-            return await _js.InvokeAsync<string>("generateCaptchaToken", _config.SiteKey, action);
+            return await _js.InvokeAsync<string>("generateCaptchaToken",_config.SiteKey, action);
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace BlazoredRecaptcha
                 throw new InvalidGoogleResponse($"Google responded with {request.StatusCode}.");
 
             var responseContent = await request.Content.ReadAsStringAsync(cancellationToken);
-            var json = JsonConvert.DeserializeObject<RecaptchaResponse>(responseContent);
+            var json = JsonSerializer.Deserialize<RecaptchaResponse>(responseContent);
 
             return json is {IsSuccess: true} && !(json.Score < 0.5);
         }

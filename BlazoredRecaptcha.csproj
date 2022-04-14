@@ -1,14 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <LangVersion>default</LangVersion>
+    <PackageVersion>1.0.1</PackageVersion>
+    <Title>BlazoredRecaptcha</Title>
+    <Authors>dnlib</Authors>
+    <Description>A really simple Blazor server-side reCAPTCHA v3 library, allows you to do the reCAPTCHA token generation and verification in the server, instead of the client.</Description>
+    <PackageProjectUrl>https://github.com/dnlib/BlazoredRecaptcha</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/dnlib/BlazoredRecaptcha/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/dnlib/BlazoredRecaptcha/main/icon.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/dnlib/BlazoredRecaptcha</RepositoryUrl>
+    <PackageTags>recaptcha, recaptcha v3, blazor, anti-bot, bot, bot prevention</PackageTags>
+    <Nullable>enable</Nullable>
+    <PackageReleaseNotes>- Update some standards to work better</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1</FileVersion>
+    <NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
-    <PackageReference Include="Microsoft.JSInterop" Version="5.0.6" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.JSInterop" Version="6.0.4" />
   </ItemGroup>
 
 </Project>
