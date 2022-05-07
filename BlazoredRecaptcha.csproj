@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <LangVersion>default</LangVersion>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>1.0.3</PackageVersion>
     <Title>BlazoredRecaptcha</Title>
     <Authors>dnlib</Authors>
     <Description>A really simple Blazor server-side reCAPTCHA v3 library, allows you to do the reCAPTCHA token generation and verification in the server, instead of the client.</Description>
@@ -15,8 +15,8 @@
     <Nullable>enable</Nullable>
     <PackageReleaseNotes>- Update some standards to work better</PackageReleaseNotes>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <AssemblyVersion>1.0.2</AssemblyVersion>
-    <FileVersion>1.0.2</FileVersion>
+    <AssemblyVersion>1.0.3</AssemblyVersion>
+    <FileVersion>1.0.3</FileVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Recaptcha.Blazored</PackageId>

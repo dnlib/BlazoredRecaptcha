@@ -81,12 +81,5 @@ namespace BlazoredRecaptcha
 
             return json is {IsSuccess: true} && !(json.Score < 0.5);
         }
-
-        public void Dispose()
-        {
-            Client.Dispose();
-            
-            GC.SuppressFinalize(this);
-        }
     }
 }
