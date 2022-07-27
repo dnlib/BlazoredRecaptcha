@@ -5,12 +5,12 @@
     <LangVersion>default</LangVersion>
     <PackageVersion>1.0.3</PackageVersion>
     <Title>BlazoredRecaptcha</Title>
-    <Authors>dnlib</Authors>
+    <Authors>hrryt</Authors>
     <Description>A really simple Blazor server-side reCAPTCHA v3 library, allows you to do the reCAPTCHA token generation and verification in the server, instead of the client.</Description>
-    <PackageProjectUrl>https://github.com/dnlib/BlazoredRecaptcha</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/dnlib/BlazoredRecaptcha/LICENSE</PackageLicenseUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/dnlib/BlazoredRecaptcha/main/icon.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/dnlib/BlazoredRecaptcha</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/hrryt/BlazoredRecaptcha</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/hrryt/BlazoredRecaptcha/LICENSE</PackageLicenseUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/hrryt/BlazoredRecaptcha/main/icon.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/hrryt/BlazoredRecaptcha</RepositoryUrl>
     <PackageTags>recaptcha, recaptcha v3, blazor, anti-bot, bot, bot prevention</PackageTags>
     <Nullable>enable</Nullable>
     <PackageReleaseNotes>- Update some standards to work better</PackageReleaseNotes>
